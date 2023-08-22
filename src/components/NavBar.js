@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Navbar, Container } from "react-bootstrap";
+import { Nav, Navbar, Container } from "react-bootstrap";
 import logo from "../assets/img/logo.svg";
 import navIcon1 from "../assets/img/nav-icon1.svg";
 import navIcon2 from "../assets/img/nav-icon2.svg";
@@ -13,7 +13,7 @@ export const NavBar = () => {
     if (window.scrollY > 50) {
       setScrolled(true);
     } else {
-      setScrolled(fasle);
+      setScrolled(false);
     }
 
     window.addEventListener("scroll", onscroll);
@@ -39,27 +39,27 @@ export const NavBar = () => {
               className={
                 activeLink === "home" ? "active navbar-link" : "navbar-link"
               }
+              onClick={() => onUpdateActiveLink("home")}
             >
-              {" "}
-              onClick={() => onUpdateActiveLink("home")} Home
+              Home
             </Nav.Link>
             <Nav.Link
               href="#skills"
               className={
                 activeLink === "skills" ? "active navbar-link" : "navbar-link"
               }
+              onClick={() => onUpdateActiveLink("skills")}
             >
-              {" "}
-              onClick={() => onUpdateActiveLink("skills")}Skills
+              Skills
             </Nav.Link>
             <Nav.Link
               href="#projects"
               className={
                 activeLink === "projects" ? "active navbar-link" : "navbar-link"
               }
+              onClick={() => onUpdateActiveLink("projects")}
             >
-              {" "}
-              onClick={() => onUpdateActiveLink("projects")}Projects
+              Projects
             </Nav.Link>
           </Nav>
           <span className="navbar-text">
