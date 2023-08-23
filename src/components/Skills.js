@@ -8,6 +8,9 @@ import colorSharp from "../assets/img/color-sharp.png"
 import htmlLogo from "../assets/img/html.png"
 import cssLogo from "../assets/img/css.png"
 import jsLogo from "../assets/img/javascript.png"
+import reactLogo from "../assets/img/react.png"
+import rubyLogo from "../assets/img/ruby.png"
+import jqueryLogo from "../assets/img/jquery.png"
 export const Skills = () => {
   const responsive = {
     superLargeDesktop: {
@@ -63,6 +66,9 @@ export const Skills = () => {
            <img src={htmlLogo} alt="html-logo"  />
            <img src={cssLogo} alt="css-logo"  />
            <img src={jsLogo} alt="js-logo"  />
+           <img src={reactLogo} alt="react-logo"  />
+           <img src={rubyLogo} alt="ruby-logo"  />
+           <img src={jqueryLogo} alt="jquery-logo"  />
           </div>
         </div>
           </div>
