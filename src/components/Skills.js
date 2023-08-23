@@ -11,6 +11,12 @@ import jsLogo from "../assets/img/javascript.png"
 import reactLogo from "../assets/img/react.png"
 import rubyLogo from "../assets/img/ruby.png"
 import jqueryLogo from "../assets/img/jquery.png"
+import bootLogo from "../assets/img/bootstrap.svg"
+import nodeLogo from "../assets/img/nodejs.png"
+import expressLogo from "../assets/img/express.png"
+import railsLogo from "../assets/img/rails.png"
+import postgresLogo from "../assets/img/postgresql.svg"
+import gitLogo from "../assets/img/git.svg"
 export const Skills = () => {
   const responsive = {
     superLargeDesktop: {
@@ -69,6 +75,12 @@ export const Skills = () => {
            <img src={reactLogo} alt="react-logo"  />
            <img src={rubyLogo} alt="ruby-logo"  />
            <img src={jqueryLogo} alt="jquery-logo"  />
+           <img src={bootLogo} alt="boot-logo"  />
+           <img src={nodeLogo} alt="node-logo"  />
+           {/* <img src={expressLogo} alt="express-logo" /> */}
+           <img src={railsLogo} alt="rails-logo" />
+           <img src={postgresLogo} alt="postgres-logo" />
+           <img src={gitLogo} alt="git-logo" />
           </div>
         </div>
           </div>
