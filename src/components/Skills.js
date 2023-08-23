@@ -5,6 +5,7 @@ import meter1 from "../assets/img/meter1.svg";
 import meter2 from "../assets/img/meter2.svg";
 import meter3 from "../assets/img/meter3.svg";
 import colorSharp from "../assets/img/color-sharp.png"
+import colorSharp2 from "../assets/img/color-sharp2.png"
 import htmlLogo from "../assets/img/html.png"
 import cssLogo from "../assets/img/css.png"
 import jsLogo from "../assets/img/javascript.png"
@@ -18,6 +19,11 @@ import railsLogo from "../assets/img/rails.png"
 import postgresLogo from "../assets/img/postgresql.svg"
 import gitLogo from "../assets/img/git.svg"
 import cypress from "../assets/img/cypress.svg"
+import mongo from "../assets/img/mongo.svg"
+import jest from "../assets/img/jest.svg"
+import mocha from  "../assets/img/mocha.svg"
+import chai from "../assets/img/chai.svg"
+import storybook from "../assets/img/storybook.svg"
 export const Skills = () => {
   const responsive = {
     superLargeDesktop: {
@@ -84,13 +90,19 @@ export const Skills = () => {
            {/* <img src={expressLogo} alt="express-logo" /> */}
            <img src={railsLogo} alt="rails-logo" />
            <img src={postgresLogo} alt="postgres-logo" />
+           <img src={mongo} alt="mongo-logo" />
            <img src={gitLogo} alt="git-logo" />
+           
            <br></br>
           </div>
           <br></br>
           <div className='testing'>
           <h3>Testing Frameworks</h3>
-           <img src={cypress} alt="git-logo" />
+           <img src={cypress} alt="cypress-logo" />
+           <img src={jest} alt="jest-logo" />
+           <img src={mocha} alt="mocha-logo" />
+           <img src={chai} alt="chai-logo" />
+           <img src={storybook} alt="chai-logo" />
           </div>
         </div>
           </div>
@@ -99,6 +111,7 @@ export const Skills = () => {
       </Row>
     </Container>
     <img className='background-image-left' src={colorSharp} />
+    {/* <img className='background-image-right' src={colorSharp2} /> */}
     </section>
   );
 };

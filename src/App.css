@@ -343,7 +343,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .stacks {
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content:space-between;
   flex-wrap: wrap;
 }
 .stacks img {
