@@ -17,6 +17,7 @@ import expressLogo from "../assets/img/express.png"
 import railsLogo from "../assets/img/rails.png"
 import postgresLogo from "../assets/img/postgresql.svg"
 import gitLogo from "../assets/img/git.svg"
+import cypress from "../assets/img/cypress.svg"
 export const Skills = () => {
   const responsive = {
     superLargeDesktop: {
@@ -46,9 +47,9 @@ export const Skills = () => {
           <h2>
             Skills
           </h2>
-          <p>
+          {/* <p>
             Tech stacks that I have used
-          </p>
+          </p> */}
           <Carousel responsive={responsive} infinite={true} className='skill-slider'>
             <div className='item'>
               <img src={meter1} alt="Image" />
@@ -67,7 +68,10 @@ export const Skills = () => {
                <h5>Logo Design</h5>
             </div>
           </Carousel>
+          <br></br>
         <div className='techs'>
+          <h3>Languages and Frameworks</h3>
+          <br></br>
           <div className='stacks'>
            <img src={htmlLogo} alt="html-logo"  />
            <img src={cssLogo} alt="css-logo"  />
@@ -81,6 +85,12 @@ export const Skills = () => {
            <img src={railsLogo} alt="rails-logo" />
            <img src={postgresLogo} alt="postgres-logo" />
            <img src={gitLogo} alt="git-logo" />
+           <br></br>
+          </div>
+          <br></br>
+          <div className='testing'>
+          <h3>Testing Frameworks</h3>
+           <img src={cypress} alt="git-logo" />
           </div>
         </div>
           </div>

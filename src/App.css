@@ -341,10 +341,16 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: -4;
 }
 .stacks {
+  width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 .stacks img {
-  width: 110px;
-  height: 110px;
+  width: 90px;
+  height: 90px;
+}
+.testing img {
+  width: 90px;
+  height: 90px;
 }
