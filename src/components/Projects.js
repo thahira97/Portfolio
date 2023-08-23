@@ -31,6 +31,8 @@ export const Projects = () => {
   return (
     <section className="projects" id="project">
       <Container>
+        <h2>Projects</h2>
+        <p>Apps that I've built</p>
         <Row xs={1} md={2} className="g-4">
           {projects.map((project, idx) => (
             <Col key={idx}>
