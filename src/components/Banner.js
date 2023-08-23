@@ -5,7 +5,7 @@ import headerIm from "../assets/img/headerIm.png";
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const toRotate = ["Full-Stack Web Developer"];
+  const toRotate = ["Full-Stack Developer"];
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const period = 2000;
@@ -43,10 +43,10 @@ export const Banner = () => {
       <Container>
         <Row className="align-items-center">
           <Col xs={12} md={6} xl={7}>
-          <h1></h1>  <span className="tagline">Welcome to my Portfolio</span>
+           <span className="tagline">Welcome to my Portfolio</span>
             <h1>
               {`Hi, I'm Thahira`}{" "}
-              <span className="wrap">{text}</span>
+              <div> <span className="wrap">{text}</span></div>
             </h1>
             <p>
               I am Thahira.I'm a Full-Stack developer based in Toronto.I love
