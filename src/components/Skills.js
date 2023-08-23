@@ -6,6 +6,8 @@ import meter2 from "../assets/img/meter2.svg";
 import meter3 from "../assets/img/meter3.svg";
 import colorSharp from "../assets/img/color-sharp.png"
 import htmlLogo from "../assets/img/html.png"
+import cssLogo from "../assets/img/css.png"
+import jsLogo from "../assets/img/javascript.png"
 export const Skills = () => {
   const responsive = {
     superLargeDesktop: {
@@ -56,10 +58,15 @@ export const Skills = () => {
                <h5>Logo Design</h5>
             </div>
           </Carousel>
+        <div className='techs'>
           <div className='stacks'>
            <img src={htmlLogo} alt="html-logo"  />
+           <img src={cssLogo} alt="css-logo"  />
+           <img src={jsLogo} alt="js-logo"  />
           </div>
         </div>
+          </div>
+        
         </Col>
       </Row>
     </Container>
