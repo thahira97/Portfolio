@@ -51,7 +51,7 @@ export const Skills = () => {
         <Col>
         <div className='skill-bx'>
           <h2>
-            Skills
+            Skills and Technologies
           </h2>
           <p>
             Tech stacks that I have used

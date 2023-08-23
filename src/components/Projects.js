@@ -1,4 +1,4 @@
-import {Container, Row, Col, Nav} from 'react-bootstrap'
+import {Container, Row, Col, Nav, TabContainer, TabContent, TabPane} from 'react-bootstrap'
 export const Projects = () => {
  const projects = [{
   title: "JobLeap",
@@ -20,20 +20,35 @@ export const Projects = () => {
       <Row>
         <Col>
         <h2>Projects</h2>
-        <p>Checkout the my works</p>
+        <p>Apps I have built</p>
+        <TabContainer id="projects-tabs" defaultActiveKey="first">
         <Nav variant="pills" defaultActiveKey="/home">
       <Nav.Item>
-        <Nav.Link href="/home">Active</Nav.Link>
+        <Nav.Link eventKey="first">React projects</Nav.Link>
       </Nav.Item>
       <Nav.Item>
-        <Nav.Link eventKey="link-1">Option 2</Nav.Link>
+        <Nav.Link eventKey="second">jQuery projects</Nav.Link>
       </Nav.Item>
       <Nav.Item>
-        <Nav.Link eventKey="disabled" disabled>
-          Disabled
+        <Nav.Link eventKey="third">
+          Ruby
         </Nav.Link>
       </Nav.Item>
     </Nav>
+    <TabContent>
+      <TabPane eventKey="first">
+       <Row>
+        {
+          projects.map((project, index) => {
+            return (
+              <p>{project.title}</p>
+            )
+          })
+        }
+       </Row>
+      </TabPane>
+    </TabContent>
+    </TabContainer>
         </Col>
       </Row>
     </Container>
