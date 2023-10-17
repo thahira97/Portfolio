@@ -14,12 +14,12 @@ export const Projects = () => {
   const projects = [
     {
       title: "JobLeap",
-      description: "Resume Modification App",
+      description: "Transforming job searches with personalized profiles and curated opportunities, featuring dynamic resume customization via integrated ChatGPT API.",
       imageUrl: jobleap,
     },
     {
       title: "Maestro Pizza",
-      description: "A food-ordering app",
+      description: "Twilio-powered app for real-time order updates, elevating the customer-restaurant experience with seamless tracking and tech integration.",
       imageUrl: maestro,
     },
     {
@@ -31,13 +31,13 @@ export const Projects = () => {
   return (
     <section className="projects" id="project">
       <Container>
-        <h2>Projects</h2>
+           <h2>Projects</h2>
         <p>Apps that I've built</p>
         <Row xs={1} md={2} className="g-4">
           {projects.map((project, idx) => (
             <Col key={idx}>
-              <Card>
-                <Card>
+              <Card style={{width: "40rem"}}>
+                <Card >
                   <Card.Img variant="top" src={project.imageUrl} />
                 </Card>
                 <Card.Body>
