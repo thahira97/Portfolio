@@ -24,6 +24,9 @@ import jest from "../assets/img/jest.svg"
 import mocha from  "../assets/img/mocha.svg"
 import chai from "../assets/img/chai.svg"
 import storybook from "../assets/img/storybook.svg"
+import fullspeed from "../assets/img/fullspeed.svg"
+import speedo from "../assets/img/1702.m10.i312.n029.S.c12.339150839 Racing vector background with car speedometer 2.svg"
+import ss from "../assets/img/Screenshot 2023-10-20 at 4.47.47 PM.svg"
 export const Skills = () => {
   const responsive = {
     superLargeDesktop: {
@@ -58,15 +61,15 @@ export const Skills = () => {
           </p>
           <Carousel responsive={responsive} infinite={true} className='skill-slider'>
             <div className='item'>
-              <img src={meter1} alt="Image" />
+              <img src={fullspeed} alt="Image" />
                <h5>Web Development</h5>
             </div>
             <div className='item'>
-              <img src={meter2} alt="Image" />
+              <img src={speedo} alt="Image" />
                <h5>Figma Design</h5>
             </div>
             <div className='item'>
-              <img src={meter3} alt="Image" />
+              <img src={ss} alt="Image" />
                <h5>Bootstrap</h5>
             </div>
             <div className='item'>

@@ -8,6 +8,7 @@ import {
 import jobleap from '../assets/img/jobleap.png';
 import maestro from '../assets/img/maestro.png';
 import interview from '../assets/img/interview-scheduler.png';
+import jungle from "../assets/img/jungle.jpeg"
 
 export const Projects = () => {
   const projects = [
@@ -19,7 +20,8 @@ export const Projects = () => {
     },
     {
       title: 'Maestro Pizza',
-      description: 'Twilio-powered app for real-time order updates, elevating the customer-restaurant experience with seamless tracking and tech integration.',
+      description: `Maestro Pizza is a food pickup app that allows customers to order pizza from their homes. The app uses Twilio to update customers and restaurants in real-time about the status of their orders. Customers receive updates via SMS or phone calls, while restaurants can manage their orders using the app. Maestro Pizza also updates its website with the latest order information, allowing customers to track their orders easily. Overall, Maestro Pizza provides a seamless ordering experience, thanks to its use of the latest technology and real-time updates.
+      `,
       techStack: "Express.js,jQuery,Node.js,PostgreSQL,Twilio API",
       imageUrl: maestro,
     },
@@ -30,13 +32,18 @@ export const Projects = () => {
       techStack: "Express.js,React,Node.js,PostgreSQL",
       imageUrl: interview,
     },
+    {
+      title: 'Jungle-Rails',
+      description: `A mini e-commerce application built with Rails 6.1.User could browse through the products and select the products on any categories that they wished to do.The product will be added to the cart. `,
+      techStack: 'Ruby on Rails,rspec',
+      imageUrl: jungle
+    }
   ];
 
   return (
     <section className="projects" id="project">
       <Container>
         <h2>Projects</h2>
-        <p>Apps that I've built</p>
         <Row xs={1} md={2} className="g-4">
           {projects.map((project, idx) => (
             <Col key={idx}>
