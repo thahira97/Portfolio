@@ -20,6 +20,10 @@ export const Contact = () => {
       [category]: value,
     });
   };
+
+  const handleSubmit = () => {
+
+  }
   return (
     <section className="contact" id="connect">
       <Container>
@@ -29,7 +33,7 @@ export const Contact = () => {
           </Col>
           <Col md={6}>
             <h2>Get In Touch</h2>
-            <form>
+            <form onSubmit={handleSubmit}>
               <Row>
                 <Col sm={6} className="px-1">
                   <input
@@ -80,6 +84,13 @@ export const Contact = () => {
                   {buttonText}
                   </span></button>
                 </Col>
+                {
+                  status.message && 
+                  <Col>
+                  <p className={status.success === false ? "danger" : "success"}>{status.message}
+                  </p>
+                  </Col>
+                }
               </Row>
             </form>
           </Col>
