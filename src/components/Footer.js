@@ -8,10 +8,7 @@ export const Footer = () => {
   return (
     <footer className="footer">
       <Container>
-        <Row className="align-item-center">
-          <Col sm={6}>
-            <img src={logo} alt="Logo"></img>
-          </Col>
+        <Row className="align-item-center">      
           <Col>
             <div className="social-icon">
               <a href="https://github.com/thahira97">
