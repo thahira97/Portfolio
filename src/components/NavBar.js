@@ -4,6 +4,7 @@ import logo from "../assets/img/logo.svg";
 import navIcon1 from "../assets/img/github.svg";
 import navIcon2 from "../assets/img/linkedin.svg";
 import navIcon3 from "../assets/img/gmail.svg";
+import resume from "../assets/img/Resume-Thahira.pdf"
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 export const NavBar = () => {
@@ -75,9 +76,10 @@ export const NavBar = () => {
                 <img src={navIcon3} alt="Gmail" />
               </a>
             </div>
+            <a href={resume} download="Thahira-Resume.pdf">
             <button className="contact" onClick={() => console.log("connect")}>
-              <span>Let's Connect</span>
-            </button>
+              <span>Resume</span>
+            </button></a>
           </span>
         </Navbar.Collapse>
       </Container>

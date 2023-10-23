@@ -15,6 +15,7 @@ import jqueryLogo from "../assets/img/jquery.png"
 import bootLogo from "../assets/img/bootstrap.svg"
 import nodeLogo from "../assets/img/nodejs.png"
 import expressLogo from "../assets/img/express.png"
+import wordPress from "../assets/img/wordpress.png"
 import railsLogo from "../assets/img/rails.png"
 import postgresLogo from "../assets/img/postgresql.svg"
 import gitLogo from "../assets/img/git.svg"
@@ -95,6 +96,7 @@ export const Skills = () => {
            <img src={postgresLogo} alt="postgres-logo" />
            <img src={mongo} alt="mongo-logo" />
            <img src={gitLogo} alt="git-logo" />
+           <img src={wordPress} alt="wp-logo" />
            
            <br></br>
           </div>

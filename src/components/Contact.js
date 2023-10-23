@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
-import contactImg from "../assets/img/contact1.png";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import contactImg from "../assets/img/2757.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import thank from "../assets/img/v887-techi-24.png";
 export const Contact = () => {
   const formInitialDetails = {
     firstName: "",
@@ -23,27 +24,28 @@ export const Contact = () => {
   };
 
   const handleSubmit = async (e) => {
-   e.preventDefault();
-   setButtonText('Sending..');
-   let response = await fetch("http://localhost:3003/contact" ,{
-    method: "POST",
-    headers: {
-      "Content-Type": "Application/json;charset=utf-8",
-
-    },
-    body: JSON.stringify(formDetails),
-   })
-   setButtonText("Send");
-   let result = await response.json();
-   setFormDetails(formInitialDetails)
-   if (result.code === 200){
-    console.log(result)
-    setStatus({success: true, message: "Message launched successfully 🚀"})
-   }
-   else {
-    setStatus({ success: false, message: "Oops! Something is wrong please try again later"})
-   }
-  }
+    e.preventDefault();
+    setButtonText("Sending..");
+    let response = await fetch("http://localhost:3003/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "Application/json;charset=utf-8",
+      },
+      body: JSON.stringify(formDetails),
+    });
+    setButtonText("Send");
+    let result = await response.json();
+    setFormDetails(formInitialDetails);
+    if (result.code === 200) {
+      console.log(result);
+      setStatus({ success: true, message: "Message launched successfully 🚀" });
+    } else {
+      setStatus({
+        success: false,
+        message: "Oops! Something is wrong please try again later",
+      });
+    }
+  };
   return (
     <section className="contact" id="connect">
       <Container>
@@ -96,26 +98,37 @@ export const Contact = () => {
                   ></input>
                 </Col>
                 <Col>
-                <textarea row="6" value={formDetails.message} placeholder="Message"  onChange={(e) => {
+                  <textarea
+                    row="6"
+                    value={formDetails.message}
+                    placeholder="Message"
+                    onChange={(e) => {
                       onFormUpdate("message", e.target.value);
-                    }}>
-                </textarea>
-                <button type="submit"><span>
-                  {buttonText}
-                  </span></button>
+                    }}
+                  ></textarea>
+                  <button type="submit">
+                    <span>{buttonText}</span>
+                  </button>
                 </Col>
-                {
-                  status.message && 
+                {status.message && (
                   <Col>
-                  <p className={status.success === false ? "danger" : "success"}>{status.message}
-                  </p>
+                    <p
+                      className={
+                        status.success === false ? "danger" : "success"
+                      }
+                    >
+                      {status.message}
+                    </p>
                   </Col>
-                }
+                )}
               </Row>
             </form>
           </Col>
         </Row>
       </Container>
+      <div className="thank-img">
+        <img src={thank} alt="thanks" />
+      </div>
     </section>
   );
 };
