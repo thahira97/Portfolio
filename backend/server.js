@@ -30,10 +30,16 @@ contactEmail.verify((error) => {
 });
 
 router.post("/contact", (req, res) => {
-  const name = req.body.firstName + req.body.lastName;
+  const name = req.body.firstName + " " + req.body.lastName;
   const email = req.body.email;
   const message = req.body.message;
   const phone = req.body.phone;
+
+  // Check if any of the required fields are empty
+  if (!name || !email || !message ) {
+    return res.status(400).json({ error: "All fields are required" });
+  }
+
   const mail = {
     from: name,
     to: process.env.EMAIL,
@@ -43,11 +49,12 @@ router.post("/contact", (req, res) => {
     <p>Phone: ${phone}</p>
     <p>Message: ${message}</p>`,
   };
+
   contactEmail.sendMail(mail, (error) => {
     if (error) {
-      res.json(error)
+      res.status(500).json({ error: "Failed to send email" });
     } else {
-      res.json({code: 200, status:"Message Sent!" })
+      res.json({ code: 200, status: "Message Sent!" });
     }
   });
 });

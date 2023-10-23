@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import contactImg from "../assets/img/contact1.png";
-import rocketImg from "../assets/img/rocket-removebg-preview.png"
+import rocketImg from "../assets/img/rockett.jpg"
 export const Contact = () => {
   const formInitialDetails = {
     firstName: "",
@@ -34,14 +34,14 @@ export const Contact = () => {
     body: JSON.stringify(formDetails),
    })
    setButtonText("Send");
-   let result = response.json();
+   let result = await response.json();
    setFormDetails(formInitialDetails)
-   if (result.code === 200 || 204){
-    console.log(result.code)
+   if (result.code === 200){
+    console.log(result)
     setStatus({success: true, message: "Message sent successfully"})
    }
    else {
-    setStatus({ success: false, message: "Something wrong please trylater"})
+    setStatus({ success: false, message: "Something is wrong please try again later"})
    }
   }
   return (
