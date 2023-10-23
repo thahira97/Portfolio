@@ -418,8 +418,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     transform: scale(1); 
     box-shadow: none; 
   }
-  .navbar-text button {
-    padding: 4px 4px;
+  .card-text{
+    font-size: small;
   }
 }
 
@@ -503,11 +503,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .thank-img img {
   width: 200px;;
 }
-
 /* Footer */
 .footer {
-  padding: 0 0 50px 0;
-  /* background: url("./assets/img/gala.jpg"); */
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;

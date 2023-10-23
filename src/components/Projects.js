@@ -51,6 +51,7 @@ export const Projects = () => {
               <Card className="project-card">
                 <Card.Img variant="top" src={project.imageUrl} />
                 <Card.Body>
+                  <hr></hr>
                   <Card.Title>{project.title}</Card.Title>
                   <Card.Text>{project.description}
                   <br></br>

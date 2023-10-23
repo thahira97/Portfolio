@@ -56,7 +56,7 @@ export const Banner = () => {
             </button>
           </Col>
           <Col xs={12} md={6} xl={5}>
-            <img src={headerIm} alt="Header Img"></img>
+            <img src={headerIm} alt="Header"></img>
           </Col>
         </Row>
       </Container>
