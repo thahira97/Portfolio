@@ -400,6 +400,23 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   opacity: 0;
   transition: opacity 0.3s; /* Add a smooth transition for opacity */
 }
+@media (max-width: 768px) {
+  .projects .container {
+    max-width: 80%; 
+    padding: 0 20px;
+  }
+
+  .project-card {
+    margin: 0; 
+    width: 100%; 
+  }
+
+  .project-card:hover {
+    transform: scale(1); 
+    box-shadow: none; 
+  }
+}
+
 
 /* ** Contact Form css** */
 
