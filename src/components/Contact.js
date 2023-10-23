@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import contactImg from "../assets/img/contact1.png";
+import rocketImg from "../assets/img/rocket-removebg-preview.png"
 export const Contact = () => {
   const formInitialDetails = {
     firstName: "",

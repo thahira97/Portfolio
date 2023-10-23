@@ -31,7 +31,7 @@ body {
   font-weight: 400;
   overflow-x: hidden;
   position: relative;
-  background-color: #121212 !important;
+  background: url("./assets/img/gala.jpg");
   color: #fff !important;
   font-family: 'Centra', sans-serif !important;
 }
@@ -360,7 +360,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .projects {
   padding: 80px 0;
   position: relative;
-  background: url('./assets/img/gala.jpg')
+  /* background: url('./assets/img/gala.jpg') */
 }
 .projects h2 {
 	font-size: 45px;
@@ -404,7 +404,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /* ** Contact Form css** */
 
 .contact {
-  background: url("./assets/img/gala.jpg");
+  /* background: url("./assets/img/gala.jpg"); */
   padding: 60px 0 200px 0;
 }
 .contact img {
@@ -476,8 +476,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /* Footer */
 .footer {
+  margin: -40px;
   padding: 0 0 50px 0;
-  background: url("./assets/img/gala.jpg");
+  /* background: url("./assets/img/gala.jpg"); */
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;

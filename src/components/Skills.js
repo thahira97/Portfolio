@@ -1,7 +1,7 @@
 import { Container, Row, Col } from 'react-bootstrap';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import meter1 from "../assets/img/meter1.svg";
+import meter1 from "../assets/img/meter1.png";
 import meter2 from "../assets/img/meter2.svg";
 import meter3 from "../assets/img/meter3.svg";
 import colorSharp from "../assets/img/color-sharp.png"
@@ -73,7 +73,7 @@ export const Skills = () => {
                <h5>Bootstrap</h5>
             </div>
             <div className='item'>
-              <img src={meter3} alt="Image" />
+              <img src={ss} alt="Image" />
                <h5>Logo Design</h5>
             </div>
           </Carousel>
