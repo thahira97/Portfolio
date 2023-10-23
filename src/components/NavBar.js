@@ -5,6 +5,7 @@ import navIcon1 from "../assets/img/github.svg";
 import navIcon2 from "../assets/img/linkedin.svg";
 import navIcon3 from "../assets/img/gmail.svg";
 import resume from "../assets/img/Resume-Thahira.pdf"
+import res from "../assets/img/resume.png"
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 export const NavBar = () => {
@@ -75,11 +76,9 @@ export const NavBar = () => {
               <a href="mailto:thahirasheerin3@gmail.com">
                 <img src={navIcon3} alt="Gmail" />
               </a>
+                      <a href={resume} target="_blank">
+<img className="resu-icon" src={res}></img></a>
             </div>
-            <a href={resume} download="Thahira-Resume.pdf">
-            <button className="contact" onClick={() => console.log("connect")}>
-              <span>Resume</span>
-            </button></a>
           </span>
         </Navbar.Collapse>
       </Container>
