@@ -41,7 +41,7 @@ export const Projects = () => {
   ];
 
   return (
-    <section className="projects" id="project">
+    <section className="projects" id="projects">
       <Container>
         <h2>Projects</h2>
         <Row xs={1} md={2} className="g-4">

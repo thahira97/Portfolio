@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import contactImg from "../assets/img/contact1.png";
-import rocketImg from "../assets/img/rockett.jpg"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 export const Contact = () => {
   const formInitialDetails = {
     firstName: "",
@@ -38,10 +38,10 @@ export const Contact = () => {
    setFormDetails(formInitialDetails)
    if (result.code === 200){
     console.log(result)
-    setStatus({success: true, message: "Message sent successfully"})
+    setStatus({success: true, message: "Message launched successfully 🚀"})
    }
    else {
-    setStatus({ success: false, message: "Something is wrong please try again later"})
+    setStatus({ success: false, message: "Oops! Something is wrong please try again later"})
    }
   }
   return (
