@@ -30,7 +30,7 @@ export const Contact = () => {
      credentials: 'include',
       method: "POST",
       headers: {
-        "Content-Type": "Application/json;charset=utf-8",
+        "Content-Type": "application/json;charset=utf-8",
       },
       body: JSON.stringify(formDetails),
     });
