@@ -13,10 +13,10 @@ app.use(cors({
 }));
 app.use(express.json());
 app.use("/", router);
-app.use(favicon(__dirname + './favicon.ico'));
+app.use(favicon(__dirname + '/favicon.ico'));
 const PORT = process.env.PORT || 8080;
 
-app.get("/contact", (req,res)=> {
+app.get("/", (req,res)=> {
   res.send("Server is running")
 })
 app.listen(PORT, () => {
@@ -39,7 +39,11 @@ contactEmail.verify((error) => {
   }
 });
 
-app.post("/contact", (req, res) => {
+router.get("/contact",(req,res)=> {
+  res.send("Contact also working")
+})
+
+router.post("/contact", (req, res) => {
   const name = req.body.firstName + " " + req.body.lastName;
   const email = req.body.email;
   const message = req.body.message;
