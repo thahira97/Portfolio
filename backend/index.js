@@ -6,27 +6,23 @@ const nodemailer = require("nodemailer");
 const favicon = require("express-favicon");
 
 const app = express();
+
 app.use(cors({
-  origin: ['http://localhost:3000'],
+  origin: ['http://localhost:3000', 'https://portfolio-back-alpha.vercel.app'],
   methods: ['GET', 'POST'],
   credentials: true
 }));
+
 app.use(express.json());
 app.use("/", router);
 app.use(favicon(__dirname + '/favicon.ico'));
+
 const PORT = process.env.PORT || 8080;
 
-app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-  res.header('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type, Authorization');
-  res.header('Access-Control-Allow-Credentials', true);
-  next();
+app.get("/", (req, res) => {
+  res.send("Server is running");
 });
 
-app.get("/", (req,res)=> {
-  res.send("Server is running")
-})
 app.listen(PORT, () => {
   console.log(`Server running on ${PORT}`);
 });
@@ -47,14 +43,14 @@ contactEmail.verify((error) => {
   }
 });
 
-router.post("/", (req, res) => {
+router.post("/contact", (req, res) => {
   const name = req.body.firstName + " " + req.body.lastName;
   const email = req.body.email;
   const message = req.body.message;
   const phone = req.body.phone;
 
   // Check if any of the required fields are empty
-  if (!name || !email || !message ) {
+  if (!name || !email || !message) {
     return res.status(400).json({ error: "All fields are required" });
   }
 

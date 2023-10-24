@@ -25,28 +25,42 @@ export const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setButtonText("Sending..");
-    let response = await fetch("http://localhost:8080",
-     {  mode: 'cors',
-     credentials: 'include',
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json;charset=utf-8",
-      },
-      body: JSON.stringify(formDetails),
-    });
-    setButtonText("Send");
-    let result = await response.json();
-    setFormDetails(formInitialDetails);
-    if (result.code === 200) {
-      console.log(result);
-      setStatus({ success: true, message: "Message launched successfully 🚀" });
-    } else {
+    
+    try {
+      const response = await fetch("http://localhost:8080/contact", {
+        method: "POST",
+        mode: "cors",
+        credentials: "include",
+        headers: {
+          "Content-Type": "application/json;charset=utf-8",
+        },
+        body: JSON.stringify(formDetails),
+      });
+  
+      const result = await response.json();
+      
+      setFormDetails(formInitialDetails);
+      
+      if (result.code === 200) {
+        console.log(result);
+        setStatus({ success: true, message: "Message sent successfully 🚀" });
+      } else {
+        setStatus({
+          success: false,
+          message: "Oops! Something went wrong. Please try again later.",
+        });
+      }
+    } catch (error) {
+      console.error("Error sending the message:", error);
       setStatus({
         success: false,
-        message: "Oops! Something is wrong please try again later",
+        message: "Oops! Something went wrong. Please try again later.",
       });
+    } finally {
+      setButtonText("Send");
     }
   };
+  
   return (
     <section className="contact" id="connect">
       <Container>
