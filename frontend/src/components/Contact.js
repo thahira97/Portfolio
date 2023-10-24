@@ -25,7 +25,7 @@ export const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setButtonText("Sending..");
-    let response = await fetch("http://localhost:8080/contact",
+    let response = await fetch("http://localhost:8080",
      {  mode: 'cors',
      credentials: 'include',
       method: "POST",
