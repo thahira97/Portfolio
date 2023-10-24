@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import contactImg from "../assets/img/2757.png";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import thank from "../assets/img/v887-techi-24.png";
 export const Contact = () => {
   const formInitialDetails = {

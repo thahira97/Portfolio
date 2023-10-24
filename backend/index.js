@@ -6,11 +6,15 @@ const nodemailer = require("nodemailer");
 const favicon = require("express-favicon");
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: ['http://localhost:3000'],
+  methods: ['GET', 'POST'],
+  credentials: true
+}));
 app.use(express.json());
 app.use("/", router);
 app.use(favicon(__dirname + './favicon.ico'));
-const PORT = process.env.PORT || 3003;
+const PORT = process.env.PORT || 8080;
 
 app.get("/", (req,res)=> {
   res.send("Server is running")
