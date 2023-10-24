@@ -23,6 +23,11 @@ const PORT = process.env.PORT || 8080;
 app.get("/", (req, res) => {
   res.send("Server is running");
 });
+// CORS header `Access-Control-Allow-Origin` set to accept all
+app.get('/allow-cors', function(request, response) {
+  response.set('Access-Control-Allow-Origin', '*');
+  response.sendFile(__dirname + '/message.json');
+});
 
 app.listen(PORT, () => {
   console.log(`Server running on ${PORT}`);
