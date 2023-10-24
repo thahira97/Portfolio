@@ -27,7 +27,7 @@ export const Contact = () => {
     setButtonText("Sending..");
     
     try {
-      const response = await fetch("http://localhost:8080/api/contact", {
+      const response = await fetch("http://localhost:8080/contact", {
         method: "POST",
         mode: "cors",
         credentials: "include",
