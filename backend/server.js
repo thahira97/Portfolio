@@ -8,7 +8,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use("/", router);
-const PORT = 3003;
+const PORT = process.env.PORT || 3003;
 
 app.use("/", (req,res)=> {
   res.send("Server is running")
