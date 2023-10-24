@@ -3,11 +3,13 @@ const express = require("express");
 const router = express.Router();
 const cors = require("cors");
 const nodemailer = require("nodemailer");
+const favicon = require("express-favicon");
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 app.use("/api/", router);
+app.use(favicon(__dirname + './favicon.ico'));
 const PORT = process.env.PORT || 3003;
 
 app.use("/api/", (req,res)=> {
