@@ -20,13 +20,8 @@ app.use(favicon(__dirname + '/favicon.ico'));
 
 const PORT = process.env.PORT || 8080;
 
-app.get("/", (req, res) => {
+app.get("/api", (req, res) => {
   res.send("Server is running");
-});
-// CORS header `Access-Control-Allow-Origin` set to accept all
-app.get('/allow-cors', function(request, response) {
-  response.set('Access-Control-Allow-Origin', '*');
-  response.sendFile(__dirname + '/message.json');
 });
 
 app.listen(PORT, () => {
@@ -49,7 +44,7 @@ contactEmail.verify((error) => {
   }
 });
 
-router.post("/contact", (req, res) => {
+router.post("/api/contact", (req, res) => {
   const name = req.body.firstName + " " + req.body.lastName;
   const email = req.body.email;
   const message = req.body.message;
