@@ -42,21 +42,20 @@ export const Banner = () => {
     <section className="banner" id="home">
       <Container>
         <Row className="align-items-center">
-          <Col xs={12} md={6} xl={7}>
-            <h1>
+             <h1>
               {`Hi, I'm Thahira`}{" "}
               <div> <span className="wrap">{text}</span></div>
             </h1>
-            <p>
-              I am Thahira.I'm a Full-Stack developer based in Toronto.I love
-              Briyani.Briyani is my life.{" "}
-            </p>
+          <Col xs={12} md={6} xl={7}>
             <button onClick={() => console.log("connect")}>
               Lets Connect <ArrowRightCircle size={25}></ArrowRightCircle>
             </button>
           </Col>
           <Col xs={12} md={6} xl={5}>
             <img src={headerIm} alt="Header"></img>
+            <h3> <p>
+            Welcome to my space-themed portfolio!Let's explore my space-a universe of creativity and innovation. Journey through the galaxies of my work and discover the stars of my achievements. Feel free to embark on this cosmic adventure!{" "}
+            </p></h3>
           </Col>
         </Row>
       </Container>
