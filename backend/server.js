@@ -7,10 +7,10 @@ const nodemailer = require("nodemailer");
 const app = express();
 app.use(cors());
 app.use(express.json());
-app.use("/", router);
+app.use("/api/", router);
 const PORT = process.env.PORT || 3003;
 
-app.use("/", (req,res)=> {
+app.get("/api/", (req,res)=> {
   res.send("Server is running")
 })
 app.listen(PORT, () => {
@@ -33,7 +33,7 @@ contactEmail.verify((error) => {
   }
 });
 
-router.post("/contact", (req, res) => {
+router.post("/api/contact", (req, res) => {
   const name = req.body.firstName + " " + req.body.lastName;
   const email = req.body.email;
   const message = req.body.message;
