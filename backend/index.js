@@ -8,11 +8,11 @@ const favicon = require("express-favicon");
 const app = express();
 app.use(cors());
 app.use(express.json());
-app.use("/api/", router);
+app.use("/", router);
 app.use(favicon(__dirname + './favicon.ico'));
 const PORT = process.env.PORT || 3003;
 
-app.use("/api/", (req,res)=> {
+app.get("/", (req,res)=> {
   res.send("Server is running")
 })
 app.listen(PORT, () => {
@@ -35,7 +35,7 @@ contactEmail.verify((error) => {
   }
 });
 
-router.post("/api/contact", (req, res) => {
+router.post("/contact", (req, res) => {
   const name = req.body.firstName + " " + req.body.lastName;
   const email = req.body.email;
   const message = req.body.message;

@@ -1,7 +1,7 @@
 {
   "rewrites": [
-    { "source": "/api/contact", "destination": "/index.js" },
-    { "source": "/api/other-route", "destination": "/other-handler.js" },
-    { "source": "/(.*)", "destination": "/index.js" }
+    { "source": "/contact", "destination": "/index.js" },
+    { "source": "/other-route", "destination": "/other-handler.js" },
+    { "source": "/", "destination": "/index.js" }
   ]
 }
