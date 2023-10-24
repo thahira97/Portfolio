@@ -10,7 +10,7 @@ app.use(express.json());
 app.use("/api/", router);
 const PORT = process.env.PORT || 3003;
 
-app.get("/api/", (req,res)=> {
+app.use("/api/", (req,res)=> {
   res.send("Server is running")
 })
 app.listen(PORT, () => {
