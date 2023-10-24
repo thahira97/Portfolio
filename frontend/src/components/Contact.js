@@ -45,6 +45,7 @@ export const Contact = () => {
         console.log(result);
         setStatus({ success: true, message: "Message sent successfully 🚀" });
       } else {
+        console.log(result);
         setStatus({
           success: false,
           message: "Oops! Something went wrong. Please try again later.",
