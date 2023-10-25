@@ -6,13 +6,13 @@ const nodemailer = require("nodemailer");
 const favicon = require("express-favicon");
 
 const app = express();
-
-app.use(cors({
-  origin: ['http://localhost:3000', 'https://portfolio-back-alpha.vercel.app'],
-  methods: ['GET', 'POST'],
-  credentials: true,
-  allowedHeaders: ['Content-Type', 'Authorization'],
-}));
+app.use(cors());
+// app.use(cors({
+//   origin: ['http://localhost:3000', 'https://portfolio-back-alpha.vercel.app'],
+//   methods: ['GET', 'POST'],
+//   credentials: true,
+//   allowedHeaders: ['Content-Type', 'Authorization'],
+// }));
 
 app.use(express.json());
 app.use("/", router);
