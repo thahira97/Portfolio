@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useTypewriter } from 'react-simple-typewriter';
 import { Container, Row, Col } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import headerIm from "../assets/img/headerIm.png";
@@ -39,13 +40,21 @@ export const Banner = () => {
       setDelta(500)
     }
   }
+  // const [text] = useTypewriter({
+  //   words: ["Developer", 'Designer', 'Doodler'],
+  //   loop:{},
+  //   typeSpeed: 120,
+  //   deleteSpeed: 50
+  // })
   return (
     <section className="banner" id="home">
       <Container>
         <Row className="align-items-center">
              <h1>
-              {`Hi, I'm Thahira`}{" "}
-              <div> <span className="wrap">{text}</span></div>
+              {`Hi, I'm Thahira`}{" "}    
+              <div className="dev"> 
+              <span className="developer">"r"</span>
+              <span className="wrap">{text}</span></div>
             </h1>
           <Col xs={12} md={6} xl={7}>
             <button onClick={() => console.log("connect")}>
