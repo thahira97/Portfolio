@@ -57,9 +57,11 @@ export const Banner = () => {
               <span className="wrap">{text}</span></div>
             </h1>
           <Col xs={12} md={6} xl={7}>
-            <button onClick={() => console.log("connect")}>
-              Lets Connect <ArrowRightCircle size={25}></ArrowRightCircle>
-            </button>
+          <a href="#connect" id="con-cont">
+                    <button>
+                      Let's connect <ArrowRightCircle size={25} />{' '}
+                    </button>
+                  </a>
           </Col>
           <Col xs={12} md={6} xl={5}>
             <img src={headerIm} alt="Header"></img>
