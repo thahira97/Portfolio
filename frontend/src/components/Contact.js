@@ -27,7 +27,7 @@ export const Contact = () => {
     setButtonText("Sending..");
     
     try {
-      const response = await fetch("http://localhost:8080/contact", {
+      const response = await fetch("https://portfolio-back-alpha.vercel.app/contact", {
         method: "POST",
         mode: "cors",
         headers: {
